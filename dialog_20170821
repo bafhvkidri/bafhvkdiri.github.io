@@ -1,0 +1,7 @@
+## 今天用Intellij IDEA安装部署Maven项目。结果却需要几个配置问题。
+***
+***程序包XXX不存在 or 找不到XXX符号***
+主要原因就是compile时未找到对应的jar包，只要在settings-compiler-exclude中，添加项目即可。
+
+***在使用JUnit运行maven测试方法时，报错：未找到测试类***
+原因貌似是IDEA不会在运行测试方法时生成测试类，需要先用maven操作使用install指令生成项目工程的测试类文件，再运行测试方法即可。
